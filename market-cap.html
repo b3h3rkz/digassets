@@ -1,0 +1,69 @@
+<section class="medium-padding50 bg-blue-lighteen" ng-app="bitnob" ng-controller="MainCtrl">
+
+   <div class="container">
+       <div class="row">
+           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+           <h4>Cryptocurrency Market Capitalizations</h4>
+           <div class="row">
+               <div class="col-md-4 col-lg-4">
+                   Market Capitalization : <span class="blue">{{globalMarketData.total_market_cap_usd | currency :  '$' : 0}}</span>
+               </div>
+               <div class="col-md-4 col-lg-4">
+                   24H Volume : <span class="blue">{{globalMarketData.total_24h_volume_usd |  currency :  '$' : 0}}</span>
+               </div>
+               <div class="col-md-4 col-lg-4">
+                    BTC Dominance : <span class="green">{{globalMarketData.bitcoin_percentage_of_market_cap}}%</span>
+               </div>
+           </div>          
+    </div>
+ <div class="table-responsive">
+
+    <table class="table table-bordered">
+
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Market Cap</th>
+                <th>Price</th>
+                <th>Volume(24hrs)</th>
+                <th>Circulating Supply</th>
+                <th>Change(24h)</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr class="clickable warning dropdown-deliverable" data-for="#{{coin.name}}" ng-repeat="coin in marketData.slice((currentPage -1) * itemsPerPage, currentPage * itemsPerPage)">
+                    <td>{{coin.rank}}</td>
+                    <td class="blue">{{coin.name}}</td>
+                    <td>{{coin.market_cap_usd | currency : '$' : 0}}</td>
+                    <td class="teal">{{coin.price_usd | currency }}</td>
+                    <td class="blue">{{coin['24h_volume_usd'] | currency : '' : 0}}</td>
+                    <td>{{coin.total_supply}} {{coin.symbol}}</td>
+                    <td ng-if="coin.percent_change_24h < 0">  <span class="red" >{{coin.percent_change_24h}} %</span> </td>
+                    <td ng-if="coin.percent_change_24h > 0">  <span class="green" >{{coin.percent_change_24h}} %</span> </td>
+                </tr>
+        </tbody>
+    </table>
+</div>
+ </div>
+  </div>
+   </div>
+</section>
+
+<style>
+     .red{
+         color: red;
+     }
+
+     .green{
+         color:green;
+     }
+
+     .blue{
+         color:blue;
+     }
+
+     .teal{
+         color: teal;
+     }
+</style>
