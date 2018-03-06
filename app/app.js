@@ -36,6 +36,26 @@ BitnobApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvid
             }]
         }
     });
+     
+    $stateProvider.state('add', {
+        url: '/add',
+        controllerAs: 'vm',
+        controller: 'CoinAddController',
+        templateUrl: 'app/views/coin/add.html',
+        resolve: {
+            deps: ['$ocLazyLoad', function ($ocLazyLoad) {
+                return $ocLazyLoad.load({
+                    name: 'BitnobApp',
+                    insertBefore: '#ng_load_plugins_before',
+                    files: [
+                        'app/controllers/CoinAddController.js', /*Route with respect to index.html file*/
+                        'app/services/Request.js'
+                    ]
+                });
+            }]
+        }
+
+    })
 }]);
 
 // Handle global LINK click
