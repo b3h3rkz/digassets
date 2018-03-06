@@ -1,17 +1,19 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="BitnobApp">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta name="description" content="Buy."/>
 	<title>Bitnob Buy, Sell and Swap Cryptocurrencies</title>
 
-	<link rel="stylesheet" type="text/css" href="css/theme-styles.css">
-	<link rel="stylesheet" type="text/css" href="css/blocks.css">
-	<link rel="stylesheet" type="text/css" href="css/widgets.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/theme-styles.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/blocks.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/widgets.css">
 
-	<link rel="shortcut icon" type="image/png" href="img/logo-bitnob.png"/>
+	<link rel="shortcut icon" type="image/png" href="assets/img/logo-bitnob.png"/>
+
+	<link id="ng_load_plugins_before" />
 
 	<!--External fonts-->
 
@@ -20,7 +22,7 @@
 	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
 
 	<!-- Styles for Plugins -->
-	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/swiper.min.css">
 
 	<!--Styles for RTL-->
 
@@ -31,7 +33,7 @@
 
 
 <!--</head>-->
-<body class="crumina-grid" ng-app="bitnob" ng-controller="MainCtrl">
+<body class="crumina-grid">
 
 <!-- Preloader -->
 
@@ -41,7 +43,6 @@
 
 
 <!-- Header -->
-
 <header class="header header--menu-rounded header--dark" id="site-header" >
 	<div class="container">
 
@@ -49,8 +50,8 @@
 		<div class="header-content-wrapper">
 
 			<div class="site-logo">
-				<a href="index.php" class="full-block"></a>
-				<img src="img/1.png" alt="Bitnob.com">
+				<a href="#" class="full-block"></a>
+				<img src="assets/img/1.png" alt="Bitnob.com">
 				<div class="logo-text">
 					<div class="logo-title">Bitnob</div>
 					<div class="logo-sub-title">Quick, Secure Digital Currency Service</div>
@@ -61,7 +62,7 @@
 
 				<!-- menu-icon-wrapper -->
 
-				<a href='javascript:void(0)' id="menu-icon-trigger" class="menu-icon-trigger showhide">
+				<a href='#' id="menu-icon-trigger" class="menu-icon-trigger showhide">
 					<span class="mob-menu--title">Menu</span>
 					<span id="menu-icon-wrapper" class="menu-icon-wrapper">
 						<svg width="1000px" height="1000px">
@@ -134,7 +135,7 @@
 					</li>
 
 					<li class="">
-						<a href="contacts.php">Contact</a>
+						<a href="#">Contact</a>
 					</li>
 				</ul>
 				<ul class="nav-add">
@@ -162,16 +163,12 @@
 	</div>
 
 </header>
-
 <div class="header-spacer"></div>
-
-
-
 <!-- ... End Header -->
 
 <div class="content-wrapper">
-
-
+	<!---->
+	<ui-view></ui-view>
 </div>
 <!-- Footer -->
 <footer class="footer" id="site-footer">
@@ -181,7 +178,7 @@
 			<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
 				<div class="widget w-info">
 					<div class="site-logo">
-						<a href="index.php" class="full-block"></a>
+						<a href="" class="full-block"></a>
 						<div class="logo-text">
 							<div class="logo-title">Bitnob</div>
 							<div class="logo-sub-title"></div>
@@ -607,24 +604,33 @@
 
 
 <!-- jQuery first, then Other JS. -->
-
-<script src="js/jquery-3.2.0.min.js"></script>
+<script src="assets/js/jquery-3.2.0.min.js"></script>
 
 
 <!-- jQuery-scripts for Template -->
 <script src="https://unpkg.com/vue"></script>
 
 
-<script src="js/crum-mega-menu.js"></script>
-<script src="js/swiper.jquery.min.js"></script>
-<script src="js/theme-plugins.js"></script>
-<script src="js/velocity.min.js"></script>
-<script src="js/main.js"></script>
-<script src="js/angular.js"></script>
+<script src="assets/js/crum-mega-menu.js"></script>
+<script src="assets/js/swiper.jquery.min.js"></script>
+<script src="assets/js/theme-plugins.js"></script>
+<script src="assets/js/velocity.min.js"></script>
+<script src="assets/js/main.js"></script>
 
-<script src="js/ui-bootstrap.js"></script>
-<script src="js/form-actions.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="assets/js/angularjs/angular.min.js"></script>
+<script src="assets/js/angularjs/angular-ui-router.min.js"></script>
+<script src="assets/js/angularjs/ocLazyLoad.min.js"></script>
+<script src="assets/js/angularjs/angular-sanitize.min.js"></script>
+<script src="assets/js/angularjs/angular-touch.min.js"></script>
+<script src="assets/js/angularjs/ui-bootstrap-tpls.min.js"></script>
+
+
+<script src="app/app.js"></script>
+
+<script src="assets/js/form-actions.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+		crossorigin="anonymous"></script>
 
 
 <script>
