@@ -51,3 +51,10 @@ BitnobApp.directive('a', function() {
         }
     };
 });
+
+var app = angular.module('myApp', []);
+	app.controller('myCtrl', function($scope){
+		$scope.firstname = "Abdul-Wahab";
+		$scope.lastname = "Awudu";
+		$scope.nickname = "Omar Kunta";
+	});
