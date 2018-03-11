@@ -1,0 +1,24 @@
+{
+  "name": "digassets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/b3h3rkz/digassets.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/b3h3rkz/digassets/issues"
+  },
+  "homepage": "https://github.com/b3h3rkz/digassets#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-live-server": "0.0.31",
+    "local-web-server": "^2.4.0"
+  }
+}
