@@ -36,11 +36,8 @@
 <body class="crumina-grid">
 
 <!-- Preloader -->
-
 <div id="hellopreloader" style="display: block; position: fixed;z-index: 99999;top: 0;left: 0;width: 100%;height: 100%;min-width: 100%;background: #33415A url(img/1.png) center center no-repeat;background-size: 51px;opacity: 3;"></div>
-
 <!-- ... end Preloader -->
-
 
 <!-- Header -->
 <header class="header header--menu-rounded header--dark" id="site-header" >
@@ -50,7 +47,7 @@
 		<div class="header-content-wrapper">
 
 			<div class="site-logo">
-				<a href="#" class="full-block"></a>
+				<a href="/" class="full-block"></a>
 				<img src="assets/img/1.png" alt="Bitnob.com">
 				<div class="logo-text">
 					<div class="logo-title">Bitnob</div>
@@ -74,76 +71,40 @@
 				</a>
 
 				<ul class="primary-menu-menu">
+				<li class="menu-item-has-children">
+						<a href="/">Home</a>
+				</li>
+
+                 <!--temporary nav-link-->
 					<li class="menu-item-has-children">
-						<a href="index.php">Home</a>
+						<a href="/detail">Info Detail</a>
+				</li>
+					
+					<li class="">
+						<a href="#">ICOs</a>
 					</li>
+
+					<li class="">
+						<a href="#">Glossary</a>
+					</li>
+				   
 					<li class="menu-item-has-children">
 						<a href="https://exchange.bitnob.com/#/access/signup">Signup</a>
 					</li>
+
 					<li class="menu-item-has-children">
 						<a href="https://exchange.bitnob.com/#/access/signin">Login</a>
 					</li>
-					<li class="menu-item-has-mega-menu menu-item-has-children">
-						<a href="#">Resources</a>
 
-						<div class="megamenu">
-							<div class="megamenu-row">
-
-								<div class="col3">
-									<ul>
-										<li class="megamenu-item-info">
-											<h5 class="megamenu-item-info-title">Charts</h5>
-										</li>
-										<li>
-											<a href="">Merchants Payment Integrations</a>
-										</li>
-									</ul>
-								</div>
-								<div class="col3">
-									<ul>
-										<li class="megamenu-item-info">
-											<h5 class="megamenu-item-info-title">Services</h5>
-										</li>
-
-										<li>
-											<a href="">Merchants Payment Integrations</a>
-										</li>
-									</ul>
-								</div>
-								<div class="col3">
-									<ul>
-										<li class="megamenu-item-info">
-											<h5 class="megamenu-item-info-title">Tools</h5>
-											<p class="megamenu-item-info-text">Tools to help you keep up with crypto.</p>
-										</li>
-										<li>
-											<a href="market-cap.php">Market Capitalization</a>
-										</li>
-										<li>
-											<a>Charts</a>
-										</li>
-										<li>
-											<a>Explorer</a>
-										</li>
-										<li>
-											<a>API</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
+					<li class="menu-item-has-children">
+						<a href="https://exchange.bitnob.com/#/access/signout">Logout</a>
 					</li>
 
 					<li class="">
 						<a href="#">Contact</a>
 					</li>
-					<li class="">
-						<a href="#">ICOs</a>
-					</li>
-					<li class="">
-						<a href="#">Glossary</a>
-					</li>
 				</ul>
+
 				<ul class="nav-add">
 					<!--                    <li class="search search_main">-->
 					<!--                        <a href="#" class="js-open-search-popup">-->
@@ -151,6 +112,7 @@
 					<!--                        </a>-->
 					<!--                    </li>-->
 				</ul>
+
 				<div class="search-standard">
 					<form id="search-header" name="form-search-header" method="post">
 						<input class="search-input" name="utouch_posts[query]" placeholder="What are you looking for?" autocomplete="off" type="search" autofocus>
@@ -174,8 +136,9 @@
 
 <div class="content-wrapper">
 	<!---->
-	<ui-view></ui-view>
+	<div class="ui-view"></div>
 </div>
+<br/> <br/>
 <!-- Footer -->
 <footer class="footer" id="site-footer">
 	<div class="container">

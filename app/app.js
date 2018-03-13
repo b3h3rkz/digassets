@@ -56,6 +56,26 @@ BitnobApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvid
         }
 
     })
+
+    // $stateProvider.state('add', {
+    //     url: '/detail',
+    //     controllerAs: 'vm',
+    //     controller: 'CoinDetailController',
+    //     templateUrl: 'app/views/coin/detail.html',
+    //     resolve: {
+    //         deps: ['$ocLazyLoad', function ($ocLazyLoad) {
+    //             return $ocLazyLoad.load({
+    //                 name: 'BitnobApp',
+    //                 insertBefore: '#ng_load_plugins_before',
+    //                 files: [
+    //                     'app/controllers/CoinDetailController.js', /*Route with respect to index.html file*/
+    //                     'app/services/Request.js'
+    //                 ]
+    //             });
+    //         }]
+    //     }
+
+    // })
 }]);
 
 // Handle global LINK click
@@ -72,9 +92,12 @@ BitnobApp.directive('a', function() {
     };
 });
 
-var app = angular.module('myApp', []);
-	app.controller('myCtrl', function($scope){
-		$scope.firstname = "Abdul-Wahab";
-		$scope.lastname = "Awudu";
-		$scope.nickname = "Omar Kunta";
-	});
+
+var routeApp = angular.module("routeApp", ["ngRoute"]);
+
+app.config(function($routeProvider) {
+    $routeProvider
+    .when("/detail", {
+        templateUrl: "app/views/coin/detail.html"
+    })
+});
