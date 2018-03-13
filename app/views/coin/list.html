@@ -63,8 +63,8 @@
     </div>
 
     <div class="container">
-        <div class="card-deck mb-3 text-center">
-            <div class="card mb-4 box-shadow">
+        <div class="card-deck mb-3 text-center" ng-repeat="list in lists" >
+            <div class="card mb-4 box-shadow" >
                 <div class="card-header">
                     <h4 class="my-0 font-weight-normal">Bitcoin(BTC)</h4>
                 </div>
@@ -72,8 +72,8 @@
                     <h1 class="card-title pricing-card-title">$6,244.27
 
                     </h1>
-                    <ul class="list-unstyled mt-3 mb-4" ng-repeat="list in lists">
-                        <li>{{'Total Market Cap: '+ list.total_market_cap + ' Volume(24h): ' + list.volume + ' Circulating Supply:  ' + list.circulating_supply }}</li>
+                    <ul class="list-unstyled mt-3 mb-4" >
+                        <li>{{'Total Market Cap: '+ list.total_market_cap +split('\n')[1]+ ' Volume(24h): ' + list.volume + ' Circulating Supply:  ' + list.circulating_supply }}</li>
                     </ul>
                     <p class="text-muted"> -0.07% (1h)</p>
                     <p class="text-muted"> -5.89% (24h)</p>
@@ -91,12 +91,7 @@
 
                     </h1>
                     <ul class="list-unstyled mt-3 mb-4">
-                        <li> Total Market Cap: $69,985,588,302 </li>
-                        <br>
-                        <li> Volume (24h): $1,505,560,000 </li>
-                        <br>
-                        <li> Circulating Supply: 98,142,190 ETH </li>
-
+                        <li>{{'Total Market Cap: '+ list.total_market_cap +split('\n')[1]+ ' Volume(24h): ' + list.volume + ' Circulating Supply:  ' + list.circulating_supply }}</li>
                     </ul>
                     <p class="text-muted">-2.66% (1h) </p>
                     <p class="text-muted">-0.49% (24h) </p>
@@ -112,13 +107,8 @@
                     <h1 class="card-title pricing-card-title">$0.812927
 
                     </h1>
-                    <ul class="list-unstyled mt-3 mb-4">
-                        <li> Total Market Cap: $31,769,994,123 </li>
-                        <br>
-                        <li> Volume (24h): $367,167,000</li>
-                        <br>
-                        <li> Circulating Supply: 39,091,956,706 XRP</li>
-
+                    <ul class="list-unstyled mt-3 mb-4" >
+                        <li>{{'Total Market Cap: '+ list.total_market_cap +split('\n')[1]+ ' Volume(24h): ' + list.volume + ' Circulating Supply:  ' + list.circulating_supply }}</li>
                     </ul>
                     <br>
 
@@ -131,81 +121,7 @@
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="card-deck mb-3 text-center">
-                <div class="card mb-4 box-shadow">
-                    <div class="card-header">
-                        <h4 class="my-0 font-weight-normal">NEO(NEO)</h4>
-                    </div>
-                    <div class="card-body">
-                        <h1 class="card-title pricing-card-title">$9,844.27
-
-                        </h1>
-                        <ul class="list-unstyled mt-3 mb-4">
-                            <li>Total Market Cap: $166,513,858,196</li>
-                            <br>
-
-                            <li>Volume (24h): $6,109,920,000</li>
-                            <br>
-                            <li>Circulating Supply: 16,914,800 BTC</li>
-
-
-                        </ul>
-                        <p class="text-muted"> -0.07% (1h)</p>
-                        <p class="text-muted"> -5.89% (24h)</p>
-                        <p class="text-muted"> -14.71% (7d)</p>
-
-                        <button type="button" class="btn btn-lg btn-block btn-outline-primary">BUY NOW</button>
-                    </div>
-                </div>
-                <div class="card mb-4 box-shadow">
-                    <div class="card-header">
-                        <h4 class="my-0 font-weight-normal">Stellar(XLM)</h4>
-                    </div>
-                    <div class="card-body">
-                        <h1 class="card-title pricing-card-title">$713.10
-
-                        </h1>
-                        <ul class="list-unstyled mt-3 mb-4">
-                            <li> Total Market Cap: $69,985,588,302 </li>
-                            <br>
-                            <li> Volume (24h): $1,505,560,000 </li>
-                            <br>
-                            <li> Circulating Supply: 98,142,190 ETH </li>
-
-                        </ul>
-                        <p class="text-muted">-2.56% (1h) </p>
-                        <p class="text-muted">-0.49% (24h) </p>
-                        <p class="text-muted"> -27.36% (7d)</p>
-                        <button type="button" class="btn btn-lg btn-block btn-primary rounded">BUY NOW</button>
-                    </div>
-                </div>
-                <div class="card mb-4 box-shadow">
-                    <div class="card-header">
-                        <h4 class="my-0 font-weight-normal">Monero(XMR)</h4>
-                    </div>
-                    <div class="card-body">
-                        <h1 class="card-title pricing-card-title">$0.2927
-
-                        </h1>
-                        <ul class="list-unstyled mt-3 mb-4">
-                            <li> Total Market Cap: $45,769,994,123 </li>
-                            <br>
-                            <li> Volume (24h): $37,133,000</li>
-                            <br>
-                            <li> Circulating Supply: 36,091,956,706 XMR</li>
-
-                        </ul>
-                        <br>
-
-                        <p class="text-muted">-2.97% (1h)</p>
-
-                        <p class="text-muted"> -5.83% (24h)</p>
-
-                        <p class="text-muted"> -22.37% (7d)</p>
-                        <button type="button" class="btn btn-lg btn-block btn-primary">BUY NOW</button>
-                    </div>
-                </div>
+        
             </div>
             <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
                 crossorigin="anonymous"></script>
