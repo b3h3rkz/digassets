@@ -34,13 +34,13 @@
         </div>
         
         <div class="col-md-4 col-md-offset-4">
-            <form action="" method="">
+            <form action="" method="" class="form-inline">
             <input type="search" placeholder="Search....">
             </form>
         </div>
         </div>
-<table class="table table-hover table-responsive">
-    <thead class="mdb-color darken-3">
+<table class="table table-hover table-responsive" id="table">
+    <thead class="mdb-color darken-3" id="table-head">
         <tr class="text-white">
             <th>#</th>
             <th>First Name</th>
@@ -50,23 +50,11 @@
     </thead>
     
     <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>comdo</td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>go come</td>
-            <td>fat</td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td>okee</td>
-            <td>the joker</td>
-            <td>Omar Kunta</td>
+        <tr ng-repeat="x in name">
+            <th scope="row">{{$index + 1}}</th>
+            <th>{{x.lname}}</th>
+            <th>{{x.fname}}</th>
+            <th>{{x.uname}}</th>
         </tr>
     </tbody>
     <tfoot>

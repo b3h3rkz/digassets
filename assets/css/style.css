@@ -17,3 +17,8 @@
 #table-section {
     margin-top: 20px;
 }
+
+#table-head {
+    background-color: rgb(5, 5, 29);
+    color: rgb(231, 231, 231);
+}
