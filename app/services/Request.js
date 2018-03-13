@@ -1,4 +1,4 @@
-angular.module('BitnobApp').service('Request', function ($http) {
+angular.module('BitnobApp').service('Request', function ($http, $q) {
     var BASE_URL = "";
 
     this.post = function (url, data, callback) {
