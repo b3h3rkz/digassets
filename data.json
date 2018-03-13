@@ -1,0 +1,145 @@
+[
+  {
+    "id": "5aa6ff1998f2c2aacd67f3b0",
+    "total_market_cap": "$2,422.60",
+    "current_price": "$61,311.89",
+    "volume": "$1,454.66",
+    "circulating_supply": "$2,455.22",
+    "change": -87,
+    "change_1h": -94.17,
+    "change_24h": -11.3,
+    "change_7d": -85.45,
+    "crypto_name": "VernCash",
+    "crypto_code": "BTCP",
+    "picture": "http://placehold.it/32x32",
+    "buy_link": "https://www.VernCash.com"
+  },
+ 
+ {
+    "id": "5aa6ff199a20a3078883b8bb",
+    "total_market_cap": "$3,471.35",
+    "current_price": "$45,364.44",
+    "volume": "$2,979.29",
+    "circulating_supply": "$3,089.89",
+    "change": 14,
+    "change_1h": -53.63,
+    "change_24h": 45.35,
+    "change_7d": -98.45,
+    "crypto_name": "Lisk",
+    "crypto_code": "VEN",
+    "picture": "http://placehold.it/32x32",
+    "buy_link": "https://www.Lisk.com"
+  },
+  
+{
+    "id": "5aa6ff19bde2ffecdc146810",
+    "total_market_cap": "$1,246.02",
+    "current_price": "$66,784.10",
+    "volume": "$2,071.68",
+    "circulating_supply": "$2,910.91",
+    "change": -57,
+    "change_1h": 29.3,
+    "change_24h": 69.84,
+    "change_7d": -1.12,
+    "crypto_name": "EthereumClassic",
+    "crypto_code": "ETH",
+    "picture": "http://placehold.it/32x32",
+    "buy_link": "https://www.EthereumClassic.com"
+  },
+ 
+ {
+    "id": "5aa6ff19972fc65b2177a127",
+    "total_market_cap": "$1,097.29",
+    "current_price": "$598.06",
+    "volume": "$2,769.53",
+    "circulating_supply": "$1,755.14",
+    "change": 5,
+    "change_1h": 83.89,
+    "change_24h": 7.18,
+    "change_7d": -63.16,
+    "crypto_name": "Bitcoin",
+    "crypto_code": "TRON",
+    "picture": "http://placehold.it/32x32",
+    "buy_link": "https://www.Bitcoin.com"
+  },
+  
+{
+    "id": "5aa6ff193b1c14ff95ccdb1f",
+    "total_market_cap": "$3,923.83",
+    "current_price": "$3,725.36",
+    "volume": "$2,505.25",
+    "circulating_supply": "$3,544.45",
+    "change": 63,
+    "change_1h": 89.94,
+    "change_24h": -47.38,
+    "change_7d": -62.46,
+    "crypto_name": "BitcoinPrivate",
+    "crypto_code": "VEN",
+    "picture": "http://placehold.it/32x32",
+    "buy_link": "https://www.BitcoinPrivate.com"
+  },
+  
+{
+    "id": "5aa6ff1966ff7579d99084e4",
+    "total_market_cap": "$3,453.82",
+    "current_price": "$21,517.89",
+    "volume": "$2,611.97",
+    "circulating_supply": "$2,641.41",
+    "change": 1,
+    "change_1h": -95.75,
+    "change_24h": 45.59,
+    "change_7d": -14.99,
+    "crypto_name": "ZClassic",
+    "crypto_code": "BTCP",
+    "picture": "http://placehold.it/32x32",
+    "buy_link": "https://www.ZClassic.com"
+  },
+  
+{
+    "id": "5aa6ff19035d7e840117b1b4",
+    "total_market_cap": "$3,860.42",
+    "current_price": "$15,468.81",
+    "volume": "$2,061.72",
+    "circulating_supply": "$3,425.35",
+    "change": 19,
+    "change_1h": 36.68,
+    "change_24h": -99.84,
+    "change_7d": 87.17,
+    "crypto_name": "Bitcoin",
+    "crypto_code": "ETH",
+    "picture": "http://placehold.it/32x32",
+    "buy_link": "https://www.Bitcoin.com"
+  },
+  
+{
+    "id": "5aa6ff19e1b694cedaf73954",
+    "total_market_cap": "$2,407.67",
+    "current_price": "$99,457.13",
+    "volume": "$2,425.15",
+    "circulating_supply": "$1,074.34",
+    "change": -60,
+    "change_1h": 36.67,
+    "change_24h": 74.57,
+    "change_7d": -92.44,
+    "crypto_name": "BitcoinPrivate",
+    "crypto_code": "BTC",
+    "picture": "http://placehold.it/32x32",
+    "buy_link": "https://www.BitcoinPrivate.com"
+  },
+  
+{
+    "id": "5aa6ff197b977f5e4998d470",
+    "total_market_cap": "$1,064.78",
+    "current_price": "$98,725.21",
+    "volume": "$2,904.91",
+    "circulating_supply": "$3,451.34",
+    "change": -72,
+    "change_1h": -92.52,
+    "change_24h": -75.13,
+    "change_7d": -51.53,
+    "crypto_name": "Bitcoin",
+    "crypto_code": "BTCP",
+    "picture": "http://placehold.it/32x32",
+    "buy_link": "https://www.Bitcoin.com"
+  }
+]

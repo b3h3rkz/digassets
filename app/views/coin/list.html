@@ -19,7 +19,7 @@
     <link href="pricing.css" rel="stylesheet">
 </head>
 
-<body>
+<body ng-app="BitnobApp" ng-controller="CoinListController">
 
     <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
         <h5 class="my-0 mr-md-auto font-weight-normal">Coinola</h5>
@@ -31,9 +31,9 @@
 
     </div>
     <div class="row">
-            <div class="col-lg-4 col-lg-offset-4 col-sm-8 col-sm-offset-4 col-md-8 col-md-offset-4 mb-4 text-center">
-                <h5>Total Market Cap: $364,976,333,310</h5>
-            </div>
+        <div class="col-lg-4 col-lg-offset-4 col-sm-8 col-sm-offset-4 col-md-8 col-md-offset-4 mb-4 text-center">
+            <h5>Total Market Cap: $364,976,333,310</h5>
+        </div>
     </div>
     <div class="row">
         <div class="col-lg-4 col-lg-offset-4 col-sm-8 col-sm-offset-4 col-md-8 col-md-offset-4">
@@ -44,15 +44,18 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 col-lg-offset-8" >
-                   <div class="col-lg-3 mt-3 pl-6"><small class="text-muted">OrderBy</small></div>
-                    <div class="col-lg-9 mb-4"><select name="order" id="">
+            <div class="col-lg-4 col-lg-offset-8">
+                <div class="col-lg-3 mt-3 pl-6">
+                    <small class="text-muted">OrderBy</small>
+                </div>
+                <div class="col-lg-9 mb-4">
+                    <select name="order" id="">
                         <option value="0">Gainers</option>
                         <option value="1">Losers</option>
                         <option value="2">Gainers2</option>
                         <option value="3">Losers2</option>
-                        
-                        
+
+
                     </select>
                 </div>
             </div>
@@ -69,14 +72,8 @@
                     <h1 class="card-title pricing-card-title">$6,244.27
 
                     </h1>
-                    <ul class="list-unstyled mt-3 mb-4">
-                        <li>Total Market Cap: $188,513,858,196</li>
-                        <br>
-                        <li>Volume (24h): $6,109,920,000</li>
-                        <br>
-                        <li>Circulating Supply: 16,914,800 BTC</li>
-
-
+                    <ul class="list-unstyled mt-3 mb-4" ng-repeat="list in lists">
+                        <li>{{'Total Market Cap: '+ list.total_market_cap + ' Volume(24h): ' + list.volume + ' Circulating Supply:  ' + list.circulating_supply }}</li>
                     </ul>
                     <p class="text-muted"> -0.07% (1h)</p>
                     <p class="text-muted"> -5.89% (24h)</p>
@@ -99,7 +96,7 @@
                         <li> Volume (24h): $1,505,560,000 </li>
                         <br>
                         <li> Circulating Supply: 98,142,190 ETH </li>
-                        
+
                     </ul>
                     <p class="text-muted">-2.66% (1h) </p>
                     <p class="text-muted">-0.49% (24h) </p>
@@ -135,87 +132,87 @@
             </div>
         </div>
         <div class="container">
-                <div class="card-deck mb-3 text-center">
-                    <div class="card mb-4 box-shadow">
-                        <div class="card-header">
-                            <h4 class="my-0 font-weight-normal">NEO(NEO)</h4>
-                        </div>
-                        <div class="card-body">
-                            <h1 class="card-title pricing-card-title">$9,844.27
-        
-                            </h1>
-                            <ul class="list-unstyled mt-3 mb-4">
-                                <li>Total Market Cap: $166,513,858,196</li>
-                                <br>
-        
-                                <li>Volume (24h): $6,109,920,000</li>
-                                <br>
-                                <li>Circulating Supply: 16,914,800 BTC</li>
-        
-        
-                            </ul>
-                            <p class="text-muted"> -0.07% (1h)</p>
-                            <p class="text-muted"> -5.89% (24h)</p>
-                            <p class="text-muted"> -14.71% (7d)</p>
-        
-                            <button type="button" class="btn btn-lg btn-block btn-outline-primary">BUY NOW</button>
-                        </div>
+            <div class="card-deck mb-3 text-center">
+                <div class="card mb-4 box-shadow">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-normal">NEO(NEO)</h4>
                     </div>
-                    <div class="card mb-4 box-shadow">
-                        <div class="card-header">
-                            <h4 class="my-0 font-weight-normal">Stellar(XLM)</h4>
-                        </div>
-                        <div class="card-body">
-                            <h1 class="card-title pricing-card-title">$713.10
-        
-                            </h1>
-                            <ul class="list-unstyled mt-3 mb-4">
-                                <li> Total Market Cap: $69,985,588,302 </li>
-                                <br>
-                                <li> Volume (24h): $1,505,560,000 </li>
-                                <br>
-                                <li> Circulating Supply: 98,142,190 ETH </li>
-                                
-                            </ul>
-                            <p class="text-muted">-2.56% (1h) </p>
-                            <p class="text-muted">-0.49% (24h) </p>
-                            <p class="text-muted"> -27.36% (7d)</p>
-                            <button type="button" class="btn btn-lg btn-block btn-primary rounded">BUY NOW</button>
-                        </div>
-                    </div>
-                    <div class="card mb-4 box-shadow">
-                        <div class="card-header">
-                            <h4 class="my-0 font-weight-normal">Monero(XMR)</h4>
-                        </div>
-                        <div class="card-body">
-                            <h1 class="card-title pricing-card-title">$0.2927
-        
-                            </h1>
-                            <ul class="list-unstyled mt-3 mb-4">
-                                <li> Total Market Cap: $45,769,994,123 </li>
-                                <br>
-                                <li> Volume (24h): $37,133,000</li>
-                                <br>
-                                <li> Circulating Supply: 36,091,956,706 XMR</li>
-        
-                            </ul>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title">$9,844.27
+
+                        </h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li>Total Market Cap: $166,513,858,196</li>
                             <br>
-        
-                            <p class="text-muted">-2.97% (1h)</p>
-        
-                            <p class="text-muted"> -5.83% (24h)</p>
-        
-                            <p class="text-muted"> -22.37% (7d)</p>
-                            <button type="button" class="btn btn-lg btn-block btn-primary">BUY NOW</button>
-                        </div>
+
+                            <li>Volume (24h): $6,109,920,000</li>
+                            <br>
+                            <li>Circulating Supply: 16,914,800 BTC</li>
+
+
+                        </ul>
+                        <p class="text-muted"> -0.07% (1h)</p>
+                        <p class="text-muted"> -5.89% (24h)</p>
+                        <p class="text-muted"> -14.71% (7d)</p>
+
+                        <button type="button" class="btn btn-lg btn-block btn-outline-primary">BUY NOW</button>
                     </div>
                 </div>
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
+                <div class="card mb-4 box-shadow">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-normal">Stellar(XLM)</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title">$713.10
+
+                        </h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li> Total Market Cap: $69,985,588,302 </li>
+                            <br>
+                            <li> Volume (24h): $1,505,560,000 </li>
+                            <br>
+                            <li> Circulating Supply: 98,142,190 ETH </li>
+
+                        </ul>
+                        <p class="text-muted">-2.56% (1h) </p>
+                        <p class="text-muted">-0.49% (24h) </p>
+                        <p class="text-muted"> -27.36% (7d)</p>
+                        <button type="button" class="btn btn-lg btn-block btn-primary rounded">BUY NOW</button>
+                    </div>
+                </div>
+                <div class="card mb-4 box-shadow">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-normal">Monero(XMR)</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title">$0.2927
+
+                        </h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li> Total Market Cap: $45,769,994,123 </li>
+                            <br>
+                            <li> Volume (24h): $37,133,000</li>
+                            <br>
+                            <li> Circulating Supply: 36,091,956,706 XMR</li>
+
+                        </ul>
+                        <br>
+
+                        <p class="text-muted">-2.97% (1h)</p>
+
+                        <p class="text-muted"> -5.83% (24h)</p>
+
+                        <p class="text-muted"> -22.37% (7d)</p>
+                        <button type="button" class="btn btn-lg btn-block btn-primary">BUY NOW</button>
+                    </div>
+                </div>
+            </div>
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+                crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+                crossorigin="anonymous"></script>
 </body>
 
 </html>
