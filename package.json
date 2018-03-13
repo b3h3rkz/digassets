@@ -19,6 +19,7 @@
   "dependencies": {
     "gulp": "^3.9.1",
     "gulp-live-server": "0.0.31",
-    "local-web-server": "^2.4.0"
+    "local-web-server": "^2.4.0",
+    "npm": "^5.7.1"
   }
 }
