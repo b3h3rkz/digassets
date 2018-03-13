@@ -63,66 +63,36 @@
     </div>
 
     <div class="container">
-        <div class="card-deck mb-3 text-center" ng-repeat="list in lists" >
-            <div class="card mb-4 box-shadow" >
-                <div class="card-header">
-                    <h4 class="my-0 font-weight-normal">{{list.crypto_name}}</h4>
-                </div>
-                <div class="card-body">
-                    <h1 class="card-title pricing-card-title">
-                        {{list.current_price}}
-                    </h1>
-                    <ul class="list-unstyled mt-3 mb-4" >
-                        <li>{{'Total Market Cap: '+ list.total_market_cap +split('\n')[1]+ ' Volume(24h): ' + list.volume + ' Circulating Supply:  ' + list.circulating_supply }}</li>
-                    </ul>
-                    <p class="text-muted">{{list.change_1h}}</p>
-                    <p class="text-muted"> {{list.change_24h}}</p>
-                    <p class="text-muted"> {{list.change_7d}}</p>
+        <div class="row">
+            
+            <div class="col-lg-4 mb-4 " ng-repeat="list in lists" >
+                <div class="card-deck md-3text-center ">
+                        <div class="card box-shadow" >
+                                <div class="card-header">
+                                        <h4 class="my-0 font-weight-normal text-center">{{list.crypto_name}}</h4>
+                                    </div>
+                                <div class="card-body">
+                                <h1 class="card-title pricing-card-title text-center">
+                                    {{list.current_price}}
+                                </h1>
+                                <div class="list-unstyled mt-3 mb-4 text-center" >
+                                        <P>{{'Total Market Cap: '+ list.total_market_cap + split('\n')[1]}}</p>
+                                        <p>{{' Volume(24h): ' + list.volume}}</p> 
+                                        <p>{{' Circulating Supply:  ' + list.circulating_supply }}</p>
+                                    </p>
+                                </div>
+                                <p class="text-muted text-center">{{list.change_1h}}</p>
+                                <p class="text-muted text-center"> {{list.change_24h}}</p>
+                                <p class="text-muted text-center"> {{list.change_7d}}</p>
+            
+                                <button type="button" class="btn btn-lg btn-block btn-outline-primary">BUY NOW</button>
+                            </div>
 
-                    <button type="button" class="btn btn-lg btn-block btn-outline-primary">BUY NOW</button>
+                        </div>
                 </div>
-            </div>
-            <div class="card mb-4 box-shadow">
-                <div class="card-header">
-                    <h4 class="my-0 font-weight-normal">{{list.crypto_name}}</h4>
-                </div>
-                <div class="card-body">
-                    <h1 class="card-title pricing-card-title">{{list.current_price}}
-
-                    </h1>
-                    <ul class="list-unstyled mt-3 mb-4">
-                        <li>{{'Total Market Cap: '+ list.total_market_cap +split('\n')[1]+ ' Volume(24h): ' + list.volume + ' Circulating Supply:  ' + list.circulating_supply }}</li>
-                    </ul>
-                    <p class="text-muted">{{list.change_1h}} </p>
-                    <p class="text-muted">{{list.change_24h}} </p>
-                    <p class="text-muted"> {{list.change_7d}}</p>
-                    <button type="button" class="btn btn-lg btn-block btn-primary rounded">BUY NOW</button>
-                </div>
-            </div>
-            <div class="card mb-4 box-shadow">
-                <div class="card-header">
-                    <h4 class="my-0 font-weight-normal">{{list.crypto_name}}</h4>
-                </div>
-                <div class="card-body">
-                    <h1 class="card-title pricing-card-title">{{list.current_price}}
-
-                    </h1>
-                    <ul class="list-unstyled mt-3 mb-4" >
-                        <li>{{'Total Market Cap: '+ list.total_market_cap +split('\n')[1]+ ' Volume(24h): ' + list.volume + ' Circulating Supply:  ' + list.circulating_supply }}</li>
-                    </ul>
-                    <br>
-
-                    <p class="text-muted">{{list.change_1h}}</p>
-
-                    <p class="text-muted"> {{list.change_24h}}</p>
-
-                    <p class="text-muted"> {{list.change_7d}}</p>
-                    <button type="button" class="btn btn-lg btn-block btn-primary">BUY NOW</button>
-                </div>
-            </div>
+                 
         </div>
-        
-            </div>
+    </div>
             <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
                 crossorigin="anonymous"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
