@@ -36,7 +36,7 @@ BitnobApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvid
             }]
         }
     });
-     
+
     $stateProvider.state('add', {
         url: '/add',
         controllerAs: 'vm',
@@ -76,6 +76,49 @@ BitnobApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvid
         }
 
     });
+
+//about router
+    $stateProvider.state('about', {
+        url: '/about',
+        controllerAs: 'vm',
+        controller: 'StaticPagesController',
+        templateUrl: 'app/views/main/about.html',
+        resolve: {
+            deps: ['$ocLazyLoad', function ($ocLazyLoad) {
+                return $ocLazyLoad.load({
+                    name: 'BitnobApp',
+                    insertBefore: '#ng_load_plugins_before',
+                    files: [
+                        'app/controllers/StaticPagesController.js', /*Route with respect to index.html file*/
+                        'app/services/Request.js'
+                    ]
+                });
+            }]
+        }
+
+    });
+
+ //careers router
+    $stateProvider.state('careers', {
+        url: '/careers',
+        controllerAs: 'vm',
+        controller: 'StaticPagesController',
+        templateUrl: 'app/views/main/careers.html',
+        resolve: {
+            deps: ['$ocLazyLoad', function ($ocLazyLoad) {
+                return $ocLazyLoad.load({
+                    name: 'BitnobApp',
+                    insertBefore: '#ng_load_plugins_before',
+                    files: [
+                        'app/controllers/StaticPagesController.js', /*Route with respect to index.html file*/
+                        'app/services/Request.js'
+                    ]
+                });
+            }]
+        }
+
+    });
+
 }]);
 
 // Handle global LINK click
